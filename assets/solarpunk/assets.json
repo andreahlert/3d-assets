@@ -1,0 +1,362 @@
+[
+ {
+  "name": "Battery Shed",
+  "cat": "Energy",
+  "slug": "battery_shed",
+  "tris": 3612
+ },
+ {
+  "name": "Bike Charger",
+  "cat": "Energy",
+  "slug": "bike_charger",
+  "tris": 1476
+ },
+ {
+  "name": "Ground Solar Array",
+  "cat": "Energy",
+  "slug": "ground_solar_array",
+  "tris": 2836
+ },
+ {
+  "name": "Small Wind Turbine",
+  "cat": "Energy",
+  "slug": "small_wind_turbine",
+  "tris": 984
+ },
+ {
+  "name": "Solar Street Lamp",
+  "cat": "Energy",
+  "slug": "solar_street_lamp",
+  "tris": 2224
+ },
+ {
+  "name": "String Lights",
+  "cat": "Energy",
+  "slug": "string_lights",
+  "tris": 2440
+ },
+ {
+  "name": "Vertical Wind Turbine",
+  "cat": "Energy",
+  "slug": "vertical_wind_turbine",
+  "tris": 1752
+ },
+ {
+  "name": "Water Wheel",
+  "cat": "Energy",
+  "slug": "water_wheel",
+  "tris": 2968
+ },
+ {
+  "name": "Beehive",
+  "cat": "Water & Garden",
+  "slug": "beehive",
+  "tris": 2900
+ },
+ {
+  "name": "Bird Bath",
+  "cat": "Water & Garden",
+  "slug": "bird_bath",
+  "tris": 1280
+ },
+ {
+  "name": "Compost Bin",
+  "cat": "Water & Garden",
+  "slug": "compost_bin",
+  "tris": 1464
+ },
+ {
+  "name": "Flower Planter",
+  "cat": "Water & Garden",
+  "slug": "flower_planter",
+  "tris": 2088
+ },
+ {
+  "name": "Garden Pond",
+  "cat": "Water & Garden",
+  "slug": "garden_pond",
+  "tris": 1684
+ },
+ {
+  "name": "Hanging Planter",
+  "cat": "Water & Garden",
+  "slug": "hanging_planter",
+  "tris": 1244
+ },
+ {
+  "name": "Herb Shelf",
+  "cat": "Water & Garden",
+  "slug": "herb_shelf",
+  "tris": 3288
+ },
+ {
+  "name": "Produce Crates",
+  "cat": "Water & Garden",
+  "slug": "produce_crates",
+  "tris": 2456
+ },
+ {
+  "name": "Rain Barrel",
+  "cat": "Water & Garden",
+  "slug": "rain_barrel",
+  "tris": 1716
+ },
+ {
+  "name": "Raised Garden Bed",
+  "cat": "Water & Garden",
+  "slug": "raised_garden_bed",
+  "tris": 2252
+ },
+ {
+  "name": "Watering Can",
+  "cat": "Water & Garden",
+  "slug": "watering_can",
+  "tris": 544
+ },
+ {
+  "name": "Wheelbarrow",
+  "cat": "Water & Garden",
+  "slug": "wheelbarrow",
+  "tris": 936
+ },
+ {
+  "name": "Bicycle",
+  "cat": "Props",
+  "slug": "bicycle",
+  "tris": 2296
+ },
+ {
+  "name": "Bike Rack",
+  "cat": "Props",
+  "slug": "bike_rack",
+  "tris": 3352
+ },
+ {
+  "name": "Fence",
+  "cat": "Props",
+  "slug": "fence",
+  "tris": 1836
+ },
+ {
+  "name": "Fence Gate",
+  "cat": "Props",
+  "slug": "fence_gate",
+  "tris": 2304
+ },
+ {
+  "name": "Hammock",
+  "cat": "Props",
+  "slug": "hammock",
+  "tris": 1160
+ },
+ {
+  "name": "Little Library",
+  "cat": "Props",
+  "slug": "little_library",
+  "tris": 1304
+ },
+ {
+  "name": "Mailbox",
+  "cat": "Props",
+  "slug": "mailbox",
+  "tris": 1256
+ },
+ {
+  "name": "Market Stall",
+  "cat": "Props",
+  "slug": "market_stall",
+  "tris": 3724
+ },
+ {
+  "name": "Picnic Table",
+  "cat": "Props",
+  "slug": "picnic_table",
+  "tris": 1648
+ },
+ {
+  "name": "Planter Bench",
+  "cat": "Props",
+  "slug": "planter_bench",
+  "tris": 3344
+ },
+ {
+  "name": "Signpost",
+  "cat": "Props",
+  "slug": "signpost",
+  "tris": 1084
+ },
+ {
+  "name": "Birch Tree",
+  "cat": "Nature",
+  "slug": "birch_tree",
+  "tris": 3048
+ },
+ {
+  "name": "Cypress Tree",
+  "cat": "Nature",
+  "slug": "cypress_tree",
+  "tris": 704
+ },
+ {
+  "name": "Fern Cluster",
+  "cat": "Nature",
+  "slug": "fern_cluster",
+  "tris": 2828
+ },
+ {
+  "name": "Flowering Bush",
+  "cat": "Nature",
+  "slug": "flowering_bush",
+  "tris": 2120
+ },
+ {
+  "name": "Fruit Tree",
+  "cat": "Nature",
+  "slug": "fruit_tree",
+  "tris": 1032
+ },
+ {
+  "name": "Grass Tuft",
+  "cat": "Nature",
+  "slug": "grass_tuft",
+  "tris": 260
+ },
+ {
+  "name": "Mushroom Cluster",
+  "cat": "Nature",
+  "slug": "mushroom_cluster",
+  "tris": 1964
+ },
+ {
+  "name": "Potted Plant",
+  "cat": "Nature",
+  "slug": "potted_plant",
+  "tris": 604
+ },
+ {
+  "name": "Rock Cluster",
+  "cat": "Nature",
+  "slug": "rock_cluster",
+  "tris": 1076
+ },
+ {
+  "name": "Round Tree",
+  "cat": "Nature",
+  "slug": "round_tree",
+  "tris": 932
+ },
+ {
+  "name": "Sunflower Patch",
+  "cat": "Nature",
+  "slug": "sunflower_patch",
+  "tris": 2296
+ },
+ {
+  "name": "Chimney",
+  "cat": "Modular",
+  "slug": "chimney",
+  "tris": 2872
+ },
+ {
+  "name": "Corner Post",
+  "cat": "Modular",
+  "slug": "corner_post",
+  "tris": 340
+ },
+ {
+  "name": "Deck Stairs",
+  "cat": "Modular",
+  "slug": "deck_stairs",
+  "tris": 1168
+ },
+ {
+  "name": "Floor Deck",
+  "cat": "Modular",
+  "slug": "floor_deck",
+  "tris": 1196
+ },
+ {
+  "name": "Gable Top",
+  "cat": "Modular",
+  "slug": "gable_top",
+  "tris": 2242
+ },
+ {
+  "name": "Green Roof Tile",
+  "cat": "Modular",
+  "slug": "green_roof_tile",
+  "tris": 2460
+ },
+ {
+  "name": "Roof Module",
+  "cat": "Modular",
+  "slug": "roof_module",
+  "tris": 3032
+ },
+ {
+  "name": "Roof Module Solar",
+  "cat": "Modular",
+  "slug": "roof_module_solar",
+  "tris": 4024
+ },
+ {
+  "name": "Stone Path Tile",
+  "cat": "Modular",
+  "slug": "stone_path_tile",
+  "tris": 1544
+ },
+ {
+  "name": "Wall Arch Door",
+  "cat": "Modular",
+  "slug": "wall_arch_door",
+  "tris": 3696
+ },
+ {
+  "name": "Wall Arch Window",
+  "cat": "Modular",
+  "slug": "wall_arch_window",
+  "tris": 3844
+ },
+ {
+  "name": "Wall Plain",
+  "cat": "Modular",
+  "slug": "wall_plain",
+  "tris": 1788
+ },
+ {
+  "name": "Wall Plank Siding",
+  "cat": "Modular",
+  "slug": "wall_plank_siding",
+  "tris": 2180
+ },
+ {
+  "name": "Wall Round Window",
+  "cat": "Modular",
+  "slug": "wall_round_window",
+  "tris": 3136
+ },
+ {
+  "name": "Wall Vines",
+  "cat": "Modular",
+  "slug": "wall_vines",
+  "tris": 3588
+ },
+ {
+  "name": "Greenhouse Dome",
+  "cat": "Outdoor",
+  "slug": "greenhouse_dome",
+  "tris": 5820
+ },
+ {
+  "name": "Pergola",
+  "cat": "Outdoor",
+  "slug": "pergola",
+  "tris": 2820
+ },
+ {
+  "name": "Walkway Railing",
+  "cat": "Outdoor",
+  "slug": "walkway_railing",
+  "tris": 2112
+ }
+]
