@@ -53,7 +53,7 @@ function show(a, scroll) {
   $('#hero-name').textContent = a.name;
   $('#hero-meta').textContent = `${a.cat} · ${a.tris.toLocaleString('en')} tris`;
   grid.querySelectorAll('.card').forEach((c) => c.setAttribute('aria-current', c.dataset.slug === a.slug));
-  if (scroll) $('.viewer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (scroll) $('.viewer').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
 }
 
 function renderChips() {
@@ -87,7 +87,7 @@ $('#q').addEventListener('input', (e) => { state.q = e.target.value; renderGrid(
 // Gallery with a lightbox.
 const box = $('#lightbox');
 $('#gallery-list').innerHTML = GALLERY.map(([f, alt]) =>
-  `<button data-src="${BASE}gallery/${f}.webp" aria-label="Open image: ${alt}"><img src="${BASE}gallery/${f}.webp" alt="${alt}" loading="lazy" width="1440" height="720"></button>`
+  `<button class="shot" data-src="${BASE}gallery/${f}.webp" aria-label="Open image: ${alt}"><img src="${BASE}gallery/${f}.webp" alt="${alt}" loading="lazy" width="1440" height="720"></button>`
 ).join('');
 $('#gallery-list').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
   $('#lightbox-img').src = b.dataset.src;
@@ -107,6 +107,7 @@ try {
   renderChips();
   renderGrid();
   show(assets.find((a) => a.slug === state.current), false);
+  window.ScrollTrigger?.refresh();
 } catch {
   $('#empty').textContent = 'Could not load the asset list. Refresh to try again.';
   $('#empty').hidden = false;

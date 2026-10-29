@@ -3,36 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>André Ahlert · Low Poly Game Assets</title>
-  <meta name="description" content="Stylized low poly 3D assets for indie games. Solarpunk Cozy Kit: 60 game-ready assets, one texture, LODs, Godot demo.">
-  <meta property="og:title" content="Solarpunk Cozy Kit · André Ahlert">
-  <meta property="og:description" content="60 cozy low poly assets for solarpunk games. One texture, three materials, LODs, GLB, FBX, Blender and Godot.">
+  <title>LoFi Dev Lounge · Low Poly Game Assets</title>
+  <meta name="description" content="Indie game asset studio. Stylized low poly 3D packs, game-ready for Godot, Unity, Unreal and Blender. First release: Solarpunk Cozy Kit, 60 assets.">
+  <meta property="og:title" content="LoFi Dev Lounge · Low Poly Game Assets">
+  <meta property="og:description" content="Stylized low poly 3D packs for indie games. Solarpunk Cozy Kit out now: 60 assets, one texture, LODs, Godot demo.">
   <meta property="og:image" content="assets/og.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f6f1e4">
+  <meta name="theme-color" content="#0c0e13">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="wrap nav__in">
-      <a class="brand" href="#top" aria-label="André Ahlert, home">
-        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 16 6l12 20z" fill="var(--leaf)"/><path d="M10 26 16 16l6 10z" fill="var(--sun)"/></svg>
-        <span>André Ahlert</span>
+      <a class="brand" href="#top" aria-label="LoFi Dev Lounge, home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 16 6l12 20z" fill="var(--lime)"/><path d="M10 26 16 16l6 10z" fill="var(--sun)"/></svg>
+        <span>LoFi Dev Lounge</span>
       </a>
       <nav aria-label="Main">
         <ul class="nav__links">
+          <li><a href="#kit">Packs</a></li>
           <li><a href="#assets">Assets</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#trailer">Trailer</a></li>
-          <li><a href="#specs">Specs</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#studio">Studio</a></li>
           <li><a class="btn btn--sm" href="#buy">Get the kit</a></li>
         </ul>
       </nav>
@@ -40,29 +44,59 @@
   </header>
 
   <main id="main">
+    <!-- HERO -->
     <section class="hero" id="top">
+      <div class="blob blob--a" aria-hidden="true"></div>
+      <div class="blob blob--b" aria-hidden="true"></div>
       <div class="wrap hero__in">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="dot"></span> New pack · Solarpunk Cozy Kit</p>
-          <h1>Cozy worlds,<br><span class="hl">powered by the sun.</span></h1>
-          <p class="lede">60 stylized, game-ready low poly assets for solarpunk games: a modular cottage with solar roofs, gardens, a greenhouse, wind turbines and a little village market.</p>
-          <div class="cta">
-            <a class="btn" href="#buy">Get the kit</a>
-            <a class="btn btn--ghost" href="#assets">Browse all 60</a>
+          <h1 class="hero__title">
+            <span class="line"><span>Low poly worlds,</span></span>
+            <span class="line"><span class="grad">ready to ship.</span></span>
+          </h1>
+          <p class="lede reveal">We design stylized, game-ready 3D asset packs for indie developers. One texture, tiny draw calls, real LODs, and files that drop straight into Godot, Unity, Unreal and Blender.</p>
+          <div class="cta reveal">
+            <a class="btn magnetic" href="#buy">Get the Solarpunk Kit <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost magnetic" href="#kit">See it in 3D</a>
           </div>
-          <dl class="stats">
-            <div><dt>Assets</dt><dd>60</dd></div>
-            <div><dt>Texture</dt><dd>1</dd></div>
-            <div><dt>Materials</dt><dd>3</dd></div>
-            <div><dt>LODs</dt><dd>0–2</dd></div>
+        </div>
+        <div class="hero__art">
+          <div class="ring" aria-hidden="true"></div>
+          <img class="island" src="assets/studio/hero.webp" alt="Floating low poly solarpunk island with a solar cottage, wind turbine and greenhouse" width="1024" height="1024">
+          <span class="float-tag tag--a">60 assets</span>
+          <span class="float-tag tag--b">1 texture</span>
+          <span class="float-tag tag--c">LOD 0 · 1 · 2</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Supported tools: Godot, Unity, Unreal, Blender, three.js, GLB, FBX">
+      <div class="marquee__track" aria-hidden="true">
+        <span>Godot 4</span><i>✦</i><span>Unity</span><i>✦</i><span>Unreal</span><i>✦</i><span>Blender 4.2+</span><i>✦</i><span>three.js</span><i>✦</i><span>GLB</span><i>✦</i><span>FBX + LOD groups</span><i>✦</i>
+        <span>Godot 4</span><i>✦</i><span>Unity</span><i>✦</i><span>Unreal</span><i>✦</i><span>Blender 4.2+</span><i>✦</i><span>three.js</span><i>✦</i><span>GLB</span><i>✦</i><span>FBX + LOD groups</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- FEATURED KIT + VIEWER -->
+    <section class="section" id="kit" aria-labelledby="kit-h">
+      <div class="wrap kit">
+        <div class="kit__copy">
+          <p class="eyebrow">Pack 01 · Out now</p>
+          <h2 id="kit-h" class="split">Solarpunk Cozy Kit</h2>
+          <p class="muted reveal">A modular cottage with solar roofs, gardens, a greenhouse dome, wind turbines and a little village market. Spin any of the 60 assets right here, and swap the whole season with one palette.</p>
+          <dl class="counters">
+            <div><dd data-count="60">0</dd><dt>assets</dt></div>
+            <div><dd data-count="1">0</dd><dt>texture</dt></div>
+            <div><dd data-count="3">0</dd><dt>materials</dt></div>
+            <div><dd data-count="3">0</dd><dt>LOD levels</dt></div>
           </dl>
         </div>
-
-        <figure class="viewer" aria-label="Interactive 3D preview">
+        <figure class="viewer reveal" aria-label="Interactive 3D preview">
           <model-viewer id="hero-mv" src="assets/solarpunk/glb/fruit_tree.glb" alt="Fruit Tree, 3D model"
             camera-controls auto-rotate auto-rotate-delay="1500" rotation-per-second="18deg" interaction-prompt="none"
-            shadow-intensity="1" shadow-softness=".8" exposure="1.05" environment-image="neutral"
-            camera-orbit="35deg 72deg auto" ar ar-modes="webxr scene-viewer quick-look" loading="eager">
+            shadow-intensity="1" shadow-softness=".8" exposure="1.1" environment-image="neutral"
+            camera-orbit="35deg 72deg auto" ar ar-modes="webxr scene-viewer quick-look" loading="lazy">
             <div class="mv-loading" slot="progress-bar"><span></span></div>
           </model-viewer>
           <figcaption class="viewer__bar">
@@ -76,16 +110,73 @@
               <button class="swatch" role="radio" aria-checked="false" data-palette="winter" title="Winter"><span style="--a:#d4e2ee;--b:#6e96ba"></span><span class="sr">Winter</span></button>
             </div>
           </figcaption>
-          <p class="viewer__hint muted">Drag to orbit · scroll to zoom · pick any asset below</p>
         </figure>
       </div>
     </section>
 
-    <section class="section" id="assets" aria-labelledby="assets-h">
+    <!-- HORIZONTAL GALLERY -->
+    <section class="hscroll" id="gallery" aria-labelledby="gallery-h">
+      <div class="hscroll__pin">
+        <div class="wrap hscroll__head">
+          <p class="eyebrow">Built only from kit pieces</p>
+          <h2 id="gallery-h">Every scene, zero extra assets.</h2>
+        </div>
+        <div class="hscroll__track" id="gallery-list"></div>
+      </div>
+    </section>
+
+    <!-- BENTO -->
+    <section class="section" id="specs" aria-labelledby="specs-h">
       <div class="wrap">
         <div class="section__head">
-          <h2 id="assets-h">Every asset, live in 3D</h2>
-          <p class="muted">Click a card to load it into the viewer. Everything shares one 128 × 64 colour texture.</p>
+          <p class="eyebrow">Why devs pick our packs</p>
+          <h2 id="specs-h" class="split">Made for people who ship games.</h2>
+        </div>
+        <div class="bento">
+          <article class="tile tile--wide">
+            <h3>Recolour the world in one PNG</h3>
+            <p class="muted">One 128 × 64 palette atlas drives the whole kit. Swap to autumn or winter, or paint your own season.</p>
+            <div class="atlas">
+              <img src="assets/solarpunk/palettes/summer.png" alt="Summer palette atlas">
+              <img src="assets/solarpunk/palettes/autumn.png" alt="Autumn palette atlas">
+              <img src="assets/solarpunk/palettes/winter.png" alt="Winter palette atlas">
+            </div>
+          </article>
+          <article class="tile tile--lime">
+            <span class="big">3</span>
+            <h3>materials, total</h3>
+            <p>Palette, Glow and Glass. Your draw call budget says thanks.</p>
+          </article>
+          <article class="tile">
+            <span class="big">2 m</span>
+            <h3>Modular grid</h3>
+            <p class="muted">Six wall types, solar roof, gable, chimney, deck and stairs snap together at real-world scale.</p>
+          </article>
+          <article class="tile">
+            <span class="big">50%</span>
+            <h3>LOD1, then 25%</h3>
+            <p class="muted">Every asset ships with three LODs. 260 to 5,800 triangles at LOD0.</p>
+          </article>
+          <article class="tile tile--sun">
+            <h3>Every engine, day one</h3>
+            <ul class="ticks">
+              <li>GLB for Godot, Unity, Unreal, three.js</li>
+              <li>FBX with LOD groups</li>
+              <li>Blender asset library with catalogs</li>
+              <li>Godot 4 demo project</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASSET BROWSER -->
+    <section class="section section--panel" id="assets" aria-labelledby="assets-h">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Asset browser</p>
+          <h2 id="assets-h" class="split">All 60, live in 3D.</h2>
+          <p class="muted">Click any card to load it into the viewer above.</p>
         </div>
         <div class="filters">
           <div class="chips" role="tablist" aria-label="Category" id="chips"></div>
@@ -99,87 +190,74 @@
       </div>
     </section>
 
-    <section class="section section--tint" id="gallery" aria-labelledby="gallery-h">
-      <div class="wrap">
-        <div class="section__head">
-          <h2 id="gallery-h">Built only from kit pieces</h2>
-          <p class="muted">Every scene below uses nothing but the 60 assets and their palette presets.</p>
-        </div>
-        <div class="gallery" id="gallery-list"></div>
-      </div>
-    </section>
-
+    <!-- TRAILER -->
     <section class="section" id="trailer" aria-labelledby="trailer-h">
       <div class="wrap narrow">
-        <div class="section__head">
-          <h2 id="trailer-h">Recorded in real time in Godot</h2>
-          <p class="muted">Day to night, recolouring, seasons and snow. 46 seconds.</p>
+        <div class="section__head center">
+          <p class="eyebrow">Trailer · 46 s</p>
+          <h2 id="trailer-h" class="split">Recorded in real time in Godot.</h2>
         </div>
-        <div class="yt" id="yt" data-id="OLCrFcHBcDk">
+        <div class="yt reveal" id="yt" data-id="OLCrFcHBcDk">
           <img src="assets/solarpunk/trailer_poster.webp" alt="" loading="lazy" width="1280" height="720">
-          <button class="yt__play" aria-label="Play trailer"><svg viewBox="0 0 68 48" aria-hidden="true"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.7C55.2.3 34 .3 34 .3s-21.2 0-26.5 1.4A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#e33"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></button>
+          <button class="yt__play" aria-label="Play trailer"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="var(--lime)"/><path d="M33 26v28l22-14z" fill="#0c0e13"/></svg></button>
         </div>
       </div>
     </section>
 
-    <section class="section section--tint" id="specs" aria-labelledby="specs-h">
+    <!-- ROADMAP -->
+    <section class="section" id="roadmap" aria-labelledby="roadmap-h">
       <div class="wrap">
         <div class="section__head">
-          <h2 id="specs-h">Made for indie devs</h2>
+          <p class="eyebrow">Roadmap</p>
+          <h2 id="roadmap-h" class="split">Next worlds in the oven.</h2>
+          <p class="muted">Concept art for packs in production. Same palette system, same engine support.</p>
         </div>
-        <div class="features">
-          <article class="feature">
-            <div class="feature__ic" aria-hidden="true">🎨</div>
-            <h3>Recolour in one PNG</h3>
-            <p>One 128 × 64 palette atlas drives the whole kit. Swap in the autumn or winter preset, or paint your own.</p>
-            <div class="atlas">
-              <img src="assets/solarpunk/palettes/summer.png" alt="Summer palette atlas">
-              <img src="assets/solarpunk/palettes/autumn.png" alt="Autumn palette atlas">
-              <img src="assets/solarpunk/palettes/winter.png" alt="Winter palette atlas">
-            </div>
+        <div class="road">
+          <article class="road__card tilt">
+            <img src="assets/studio/packs.webp" alt="Concept art: low poly fishing village with pier, boats and lighthouse" loading="lazy" width="1536" height="1024">
+            <div class="road__info"><span class="badge">In production</span><h3>Pack 02 · Harbor Village</h3><p class="muted">Pier, boats, lighthouse, nets and faceted water.</p></div>
           </article>
-          <article class="feature">
-            <div class="feature__ic" aria-hidden="true">⚡</div>
-            <h3>Light on draw calls</h3>
-            <p>Three materials for everything: Palette, Glow and Glass. 260 to 5,800 triangles per asset, with LOD1 at 50% and LOD2 at 25%.</p>
-          </article>
-          <article class="feature">
-            <div class="feature__ic" aria-hidden="true">🧱</div>
-            <h3>Snaps together</h3>
-            <p>Modular cottage on a 2 m grid: six wall types, solar roof, gable, chimney, deck and stairs. Real-world scale in metres.</p>
-          </article>
-          <article class="feature">
-            <div class="feature__ic" aria-hidden="true">📦</div>
-            <h3>Every engine</h3>
-            <ul class="ticks">
-              <li>GLB for Godot, Unity, Unreal, three.js</li>
-              <li>FBX with LOD groups for Unity and Unreal</li>
-              <li>Blender 4.2+ asset library with catalogs</li>
-              <li>Godot 4 demo project, ready to play</li>
-            </ul>
+          <article class="road__card tilt">
+            <img src="assets/studio/pack2.webp" alt="Concept art: low poly desert oasis outpost with adobe huts and palms" loading="lazy" width="1536" height="1024">
+            <div class="road__info"><span class="badge badge--muted">Concept</span><h3>Pack 03 · Oasis Outpost</h3><p class="muted">Adobe huts, palms, market stalls and dunes.</p></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="buy" aria-labelledby="buy-h">
-      <div class="wrap narrow">
-        <div class="section__head center">
-          <h2 id="buy-h">Get the Solarpunk Cozy Kit</h2>
-          <p class="muted">Royalty free for personal and commercial projects.</p>
+    <!-- STUDIO -->
+    <section class="section" id="studio" aria-labelledby="studio-h">
+      <div class="wrap studio">
+        <div class="studio__img reveal"><img src="assets/studio/studio.webp" alt="Low poly illustration of a cozy creator desk at night with a cat" loading="lazy" width="1536" height="1024"></div>
+        <div class="studio__copy">
+          <p class="eyebrow">The studio</p>
+          <h2 id="studio-h" class="split">A tiny studio with a lofi soundtrack.</h2>
+          <p class="muted reveal">LoFi Dev Lounge is run by André Ahlert, a developer who builds the assets he wished existed for his own games. Every pack is modelled, optimised and tested inside a real engine before it ships, and every one is royalty free.</p>
+          <a class="btn btn--ghost magnetic reveal" href="https://www.youtube.com/@LoFDevLounge">Watch on YouTube</a>
         </div>
-        <div class="stores">
-          <a class="store" href="https://andreahlert.itch.io/solarpunk-cozy-kit">
-            <span class="store__name">itch.io</span>
-            <span class="store__price">$9.99</span>
-            <span class="store__note">GLB, FBX, Blender library and Godot demo</span>
-            <span class="btn">Buy on itch.io</span>
-          </a>
-          <div class="store store--soon" aria-disabled="true">
-            <span class="store__name">Superhive</span>
-            <span class="store__price">Soon</span>
-            <span class="store__note">Blender Market listing under review</span>
-            <span class="btn btn--ghost">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- BUY -->
+    <section class="section buy" id="buy" aria-labelledby="buy-h">
+      <div class="wrap narrow">
+        <div class="buy__box">
+          <div class="blob blob--c" aria-hidden="true"></div>
+          <p class="eyebrow">Royalty free · personal and commercial</p>
+          <h2 id="buy-h" class="split">Start building your cozy world today.</h2>
+          <div class="stores">
+            <a class="store magnetic" href="https://andreahlert.itch.io/solarpunk-cozy-kit">
+              <span class="store__name">itch.io</span>
+              <span class="store__price">$9.99</span>
+              <span class="store__note">GLB, FBX, Blender library and Godot demo</span>
+              <span class="btn">Buy on itch.io →</span>
+            </a>
+            <div class="store store--soon" aria-disabled="true">
+              <span class="store__name">Superhive</span>
+              <span class="store__price">Soon</span>
+              <span class="store__note">Blender Market listing under review</span>
+              <span class="btn btn--ghost">Coming soon</span>
+            </div>
           </div>
         </div>
       </div>
@@ -187,13 +265,16 @@
   </main>
 
   <footer class="foot">
-    <div class="wrap foot__in">
-      <p><strong>André Ahlert</strong> · stylized low poly assets for games</p>
-      <ul class="foot__links">
-        <li><a href="https://www.youtube.com/@LoFDevLounge">YouTube</a></li>
-        <li><a href="https://andreahlert.itch.io">itch.io</a></li>
-        <li><a href="https://github.com/andreahlert">GitHub</a></li>
-      </ul>
+    <div class="wrap">
+      <p class="foot__word" aria-hidden="true">LoFi Dev Lounge</p>
+      <div class="foot__in">
+        <p>© 2026 LoFi Dev Lounge · stylized low poly assets for games</p>
+        <ul class="foot__links">
+          <li><a href="https://www.youtube.com/@LoFDevLounge">YouTube</a></li>
+          <li><a href="https://andreahlert.itch.io">itch.io</a></li>
+          <li><a href="https://github.com/andreahlert">GitHub</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
@@ -203,5 +284,6 @@
   </dialog>
 
   <script src="app.js" type="module"></script>
+  <script src="motion.js" defer></script>
 </body>
 </html>
